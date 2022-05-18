@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         //          coupling makes it easy to customize
         viewModel.bindView(binding.channelListView, this)
         binding.channelListView.setChannelItemClickListener { channel ->
-            // TODO - start channel activity
+            startActivity(ChannelActivity.newIntent(this, channel))
         }
     }
 }
